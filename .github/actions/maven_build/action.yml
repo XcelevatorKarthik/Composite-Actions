@@ -1,4 +1,4 @@
-name : "java maven buil"
+name : "java maven build"
 description : "setup java"
 
 inputs :
