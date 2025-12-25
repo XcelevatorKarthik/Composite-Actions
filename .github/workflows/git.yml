@@ -1,0 +1,20 @@
+name: java CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull-requests:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: run java maven composite action
+        uses: ./.github/actions/maven_build
+        with:
+          java-version: "24"
